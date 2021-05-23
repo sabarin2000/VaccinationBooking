@@ -20,6 +20,10 @@ namespace VaccinationBooking.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<AccountInfos> AccountInfos { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Vaccine> Vaccines { get; set; }
+        public DbSet<Availability> Availabilities { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
